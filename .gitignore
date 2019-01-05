@@ -49,5 +49,7 @@ node_modules/
 
 
 # Ignore master key for decrypting credentials and more.
+/test/*
 /config/master.key
 /config/database.yml
+/config/secrets.yml
