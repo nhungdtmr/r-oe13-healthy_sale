@@ -1,0 +1,5 @@
+value:
+  maximum_name: 50
+  maximum_email: 50
+  start_date: 10
+  end_date: 100
