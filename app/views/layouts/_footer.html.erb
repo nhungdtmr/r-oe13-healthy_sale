@@ -1,0 +1,32 @@
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="companyinfo">
+            <h2><span><%= t ".healthy" %></span><%= t ".sale" %></h2>
+            <p><%= t ".address" %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9"> <%= t ".deve_by" %>
+          <%= link_to t(".name_develop"), "#", class: "fa fa-love" %>
+        </div>
+        <div class="col-sm-1">
+          <%= link_to t(".news"), "#" %>
+        </div>
+        <div class="col-sm-1">
+          <%= link_to t(".english"), locale:"en" %>
+        </div>
+        <div class="col-sm-1">
+          <%= link_to t(".vietnamese"), locale:"vi" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

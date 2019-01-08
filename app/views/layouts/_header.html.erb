@@ -1,0 +1,93 @@
+<header id="header">
+  <div class="header_top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="contactinfo">
+            <ul class="nav nav-pills">
+              <li>
+                <%= link_to "#" do %>
+                  <i class="fa fa-phone"></i><%= t ".phone" %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <i class="fa fa-envelope"></i><%= t ".email" %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="social-icons pull-right">
+            <ul class="nav navbar-nav">
+              <li>
+                <%= link_to t(".facebook") do %>
+                  <i class="fa fa-facebook"></i>
+                <% end %>
+              </li>
+              <li>
+                <% link_to t(".google") do %>
+                  <i class='fa fa-google-plus'></i>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>	
+  <div class="header-middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="logo pull-left">
+            <%= link_to image_tag("home/logo.png", alt: "Shop logo"), root_path %>
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="shop-menu pull-right">
+            <ul class="nav navbar-nav">
+              <li>
+                <%= link_to "#" do %>
+                  <i class="fa fa-shopping-cart"></i><%= t ".cart" %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <i class="fa fa-user"></i><%= t ".user" %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "#" do %>
+                  <i class="fa fa-lock"></i><%= t ".login" %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="mainmenu pull-left">
+            <ul class="nav navbar-nav collapse navbar-collapse">
+              <li><%= link_to t(".home"), root_path, class: "active" %></li>
+              <li><%= link_to t(".about"), help_path %></li>
+              <li><%= link_to t(".help"), help_path %></li>
+              <li><%= link_to t(".contact"), contact_path %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="search_box pull-right">
+            <input type="text" placeholder="Search"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
