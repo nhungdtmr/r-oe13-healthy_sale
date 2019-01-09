@@ -54,17 +54,21 @@
                 <% end %>
               </li>
               <li>
-                <%= link_to user_path do %>
-                  <i class="fa fa-user"></i><%= t ".user" %>
-                <% end %>
-              </li>
-              <li>
                 <% if logged_in? %>
-                  <%= link_to root_path do %>
-                    <i class="fa fa-lock"></i><%= t ".logout" %>
-                  <% end %>
+                  <li class="dropdown">
+                    <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"}  do %>
+                      <i class="fa fa-user"></i><%= current_user.username %>
+                      <b class="caret"></b>
+                    <% end %>
+                    <ul class="dropdown-menu">
+                      <li><%= link_to t(".profile"), current_user %></li>
+                      <li><%= link_to t(".settings"), "#" %></li>
+                      <li class="divider"></li>
+                      <li><%= link_to t(".log_out"), logout_path, method: :delete %></li>
+                    </ul>
+                  </li>
                 <% else %>
-                  <%= link_to signup_path do %>
+                  <%= link_to login_path do %>
                     <i class="fa fa-lock"></i><%= t ".login" %>
                   <% end %>
                 <% end %>

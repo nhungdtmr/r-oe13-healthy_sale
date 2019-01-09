@@ -24,6 +24,14 @@ en:
       logout: " Logout"
     application:
       base_title: "Healthy sale"
+  sessions:
+    new:
+      login_title: "Login"
+      enter_email: "Enter your email"
+      enter_pass: "Enter your password"
+      remember_me: "Remember_me"
+      new_user: "New user? "
+      sign_up: "Sign up now!"
   static_pages:
     home:
       base_title: "Healthy sale"
