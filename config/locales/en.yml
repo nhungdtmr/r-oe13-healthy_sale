@@ -1,5 +1,24 @@
 en:
+  admin:
+    users:
+      index:
+        admin_page: "Admin page"
+        users_title: "All Users"
+        delete: "Delete"
   layouts:
+    admin_footer:
+      name_develop: "ABC team"
+      about: "About"
+      news: "News"
+      healthy: "Healthy"
+      sale: "-Sale"
+      address: "New York City"
+      deve_by: "Developed by "
+    admin_header:
+      phone: " +2 95 01 88 821"
+      email: " info@domain.com"
+      facebook: "https://www.facebook.com/marinhungdo"
+      google: "https://plus.google.com/discover"
     footer:
       name_develop: "ABC team"
       about: "About"

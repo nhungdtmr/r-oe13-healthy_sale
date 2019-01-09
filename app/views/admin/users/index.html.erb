@@ -1,0 +1,25 @@
+<% provide :title, t(".users_title") %>
+<div class="kenh14-border" id="blog-title" >
+  <h1><%= t ".users_title" %></h1>
+</div>
+  <div class="row">
+    <% @users.each do |user| %>
+      <div class="col-md-4">
+        <section class="user_info">
+          <div class="card-body">
+            <h4 class="card-title"><%= link_to user.username, user_path(user) %></h4>
+            <h5><%= user.email %></h5>
+            <h5><%= user.dob %></h5>
+            <h5><%= user.phone %></h5>
+            <h5><%= user.address %></h5>
+          </div>
+          <div class="card-footer">
+            <% if !current_user.admin? %>
+              <%= link_to (t ".delete"), admin_user_path(user), action: "destroy", method: :delete,  data: {confirm: t(".you_want")}, class: "btn btn-danger", id: "delete-button", remote: true %>
+            <% end %>
+          </div>
+        </section>
+      </div>
+    <% end %>
+  </div>
+<%= paginate @users, theme: "twitter-bootstrap-3" %>

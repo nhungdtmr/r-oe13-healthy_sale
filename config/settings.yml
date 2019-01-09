@@ -3,3 +3,4 @@ value:
   maximum_email: 50
   start_date: 10
   end_date: 100
+  user_page: 20

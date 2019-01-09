@@ -42,40 +42,38 @@
       <div class="row">
         <div class="col-sm-4">
           <div class="logo pull-left">
-            <%= link_to image_tag("home/logo.png", alt: "Shop logo"), root_path %>
+            <%= link_to image_tag("home/logo-admin.png", alt: "Shop logo"), admin_users_path %>
           </div>
         </div>
         <div class="col-sm-8">
           <div class="shop-menu pull-right">
             <ul class="nav navbar-nav">
-              <li>
-                <%= link_to "#" do %>
-                  <i class="fa fa-shopping-cart"></i><%= t ".cart" %>
-                <% end %>
-              </li>
-              <li>
-                <% if logged_in? %>
-                  <% if current_user.admin? %>
-                    <li><%= link_to t(".admin_page"), admin_users_path %></li>
-                  <%end%>
-                  <li class="dropdown">
-                    <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"}  do %>
-                      <i class="fa fa-user"></i><%= current_user.username %>
-                      <b class="caret"></b>
-                    <% end %>
-                    <ul class="dropdown-menu">
-                      <li><%= link_to t(".profile"), current_user %></li>
-                      <li><%= link_to t(".settings"), edit_user_path(current_user) %></li>
-                      <li class="divider"></li>
-                      <li><%= link_to t(".log_out"), logout_path, method: :delete %></li>
-                    </ul>
-                  </li>
-                <% else %>
-                  <%= link_to login_path do %>
-                    <i class="fa fa-lock"></i><%= t ".login" %>
-                  <% end %>
-                <% end %>
-              </li>
+              <% if logged_in? %>
+                <li><%= link_to t(".user"), admin_users_path %></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <%= t ".item"%>
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to t(".all_items"), "#" %></li>
+                    <li><%= link_to t(".add_new"), "#" %></li>
+                  </ul>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-user"></i><%= t ".account" %>
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to t(".profile"), current_user %></li>
+                    <li><%= link_to t(".settings"), edit_user_path(current_user) %></li>
+                    <li class="divider"></li>
+                    <li><%= link_to t(".log_out"), logout_path, method: :delete %></li>
+                  </ul>
+                </li>
+              <% else %>
+                <li><%= link_to "<i class='fa fa-lock'></i> Login".html_safe, login_path %></li>
+              <% end %>
             </ul>
           </div>
         </div>
