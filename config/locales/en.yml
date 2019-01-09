@@ -21,6 +21,7 @@ en:
       cart: " Cart"
       user: " User"
       login: " Login"
+      logout: " Logout"
     application:
       base_title: "Healthy sale"
   static_pages:
@@ -53,3 +54,16 @@ en:
     contact:
       contact_title: "Contact"
       des: "This is contact page"
+  users:
+    no_such: "No such"
+    new:
+      sign_up_title: "Sign up"
+      enter_name: "Enter your name"
+      enter_email: "Enter your email"
+      enter_pass: "Enter your password"
+      enter_address: "Enter your address"
+      enter_phone: "Enter your phone number"
+      signup: "Sign up"
+    create:
+      create_success: "Create success"
+      create_fail: "Create fail"

@@ -54,13 +54,19 @@
                 <% end %>
               </li>
               <li>
-                <%= link_to "#" do %>
+                <%= link_to user_path do %>
                   <i class="fa fa-user"></i><%= t ".user" %>
                 <% end %>
               </li>
               <li>
-                <%= link_to "#" do %>
-                  <i class="fa fa-lock"></i><%= t ".login" %>
+                <% if logged_in? %>
+                  <%= link_to root_path do %>
+                    <i class="fa fa-lock"></i><%= t ".logout" %>
+                  <% end %>
+                <% else %>
+                  <%= link_to signup_path do %>
+                    <i class="fa fa-lock"></i><%= t ".login" %>
+                  <% end %>
                 <% end %>
               </li>
             </ul>
