@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_user, only: :show
+  before_action :correct_user, only: %i(edit update)
 
   def new
     @user = User.new
@@ -9,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       flash[:success] = t ".create_success"
-      sign_up @user
+      log_in @user
       redirect_to @user
     else
       flash[:danger] = t ".create_fail"
@@ -18,6 +19,17 @@ class UsersController < ApplicationController
   end
 
   def show; end
+
+  def edit; end
+
+  def update
+    if @user.update user_params
+      flash[:success] = t ".update_success"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
 
   private
 
