@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :imports
 
   before_save :downcase_email
+  attr_accessor :remember_token
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :username, presence: true, length: {maximum: Settings.value.maximum_name}
   validates :email, presence: true, length: {maximum: Settings.value.maximum_email},
@@ -27,6 +28,19 @@ class User < ApplicationRecord
     digest = send "#{attribute}_digest"
     return false if digest.nil?
     BCrypt::Password.new(digest).is_password? token
+  end
+
+  def remember
+    self.remember_token = User.new_token
+    update remember_digest: User.digest(remember_token)
+  end
+
+  def forget
+    update remember_digest: nil
+  end
+
+  def current_user? user
+    user == current_user
   end
   
   private
