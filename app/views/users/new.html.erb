@@ -1,23 +1,10 @@
 <% provide :title, t(".sign_up_title") %>
+<% provide :button_text, t(".signup") %>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <div class="signup-form">
       <h2 class="center-parent"><%= t ".sign_up_title"%></h2>
-      <%= form_for @user, url: signup_path do |f| %>
-        <%= render "shared/error_messages", object: f.object%>
-        <%= f.text_field :username, placeholder: t(".enter_name"), class: "form-control" %>
-        <%= f.email_field :email, placeholder: t(".enter_email"), class: "form-control" %>
-        <%= f.password_field :password, placeholder: t(".enter_pass"), class: "form-control" %>
-        <%= f.password_field :password_confirmation, placeholder: t(".enter_pass"), class: "form-control" %>
-        <div class="form-group">
-          <%= f.label :birthday, class: "form-label" %> 
-          <%= f.date_select :dob, {order: [:month, :day, :year], start_year: start_year, end_year: end_year}, {required: true} %> 
-        </div>
-        <br/>
-        <%= f.text_field :address, placeholder: t(".enter_address"), class: "form-control" %>
-        <%= f.text_field :phone, placeholder: t(".enter_phone"), class: "form-control" %>
-        <%= f.submit t(".signup"), class: "btn btn-primary" %>
-      <% end %>
+      <%= render "form" %>
     </div>
   </div>
 </div>

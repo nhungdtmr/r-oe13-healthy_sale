@@ -64,14 +64,23 @@ en:
       des: "This is contact page"
   users:
     no_such: "No such"
-    new:
-      sign_up_title: "Sign up"
+    form:
       enter_name: "Enter your name"
       enter_email: "Enter your email"
       enter_pass: "Enter your password"
       enter_address: "Enter your address"
       enter_phone: "Enter your phone number"
+    new:
+      sign_up_title: "Sign up"
       signup: "Sign up"
     create:
       create_success: "Create success"
       create_fail: "Create fail"
+    edit:
+      edit_title: "Edit profile"
+      edit_page: "EDIT PROFILE"
+      save: "Save change"
+      normal_user: "User"
+    update:
+      update_success: "Your profile updated!"
+      normal_user: "User"
