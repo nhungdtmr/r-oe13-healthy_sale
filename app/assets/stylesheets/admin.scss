@@ -1,0 +1,168 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'color';
+
+/* universal */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: $white;
+  position: relative;
+  font-weight:400px;
+  padding-top: 0px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/*********************from*****************/
+#form {
+  display: block;
+  margin-bottom: 185px;
+  margin-top: 185px;
+  overflow: hidden;
+}
+
+.new-form {
+
+}
+
+.checkbox {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  span {
+    margin-left: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+}
+
+
+.new-form {
+  h2 {
+    color: $dark-gambogeish-gray;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+}
+
+.new-form {
+  form {
+    input {
+      background: $yellowish-white;
+      border: medium none;
+      color: $dark-gambogeish-gray;
+      display: block;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      height: 40px;
+      margin-bottom: 10px;
+      outline: medium none;
+      padding-left: 10px;
+      width: 100%;
+    }
+  }
+}
+
+.new-form {
+  form {
+    span {
+      line-height: 25px;
+    }
+  }
+}
+
+.new-form {
+  form {
+    span {
+      input {
+        width: 15px;
+        float: left;
+        height: 15px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.new-form {
+  form {
+    button {
+      margin-top: 23px;
+    }
+  }
+}
+
+.new-form {
+  form {
+    button {
+      background: $yellow-orange;
+      border: medium none;
+      border-radius: 0;
+      color: $white;
+      display: block;
+      font-family: 'Roboto', sans-serif;
+      padding: 6px 25px;
+    }
+  }
+}
+
+.label-checkbox {
+  height: 20px;
+  width: 20px;
+  background-color: #yellow-orange;
+}
+
+.or {
+  background: $yellow-orange;
+  border-radius: 40px;
+  color: $white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  height: 50px;
+  line-height: 50px;
+  margin-top: 75px;
+  text-align: center;
+  width: 50px;
+}

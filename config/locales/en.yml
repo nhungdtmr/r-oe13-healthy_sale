@@ -5,15 +5,24 @@ en:
         admin_page: "Admin page"
         users_title: "All Users"
         delete: "Delete"
+    products:
+      product_form:
+        enter_name: "Enter product's name"
+        enter_manufacture: "Enter manufacture"
+        enter_net_weight: "Enter product's net weight"
+        enter_price: "Enter product's price"
+        enter_description: "Enter product's description"
+      index:
+        admin_page: "Admin page"
+        products_title: "All products"
+        delete: "Delete"
+      new:
+        admin_page: "Admin page"
+        new_product_title: "New product"
+        save: "Save"
   layouts:
-    admin_footer:
-      name_develop: "ABC team"
-      about: "About"
-      news: "News"
-      healthy: "Healthy"
-      sale: "-Sale"
-      address: "New York City"
-      deve_by: "Developed by "
+    admin_layout:
+      title: "Admin page"
     admin_header:
       phone: " +2 95 01 88 821"
       email: " info@domain.com"

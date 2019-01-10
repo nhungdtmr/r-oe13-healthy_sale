@@ -1,3 +1,15 @@
+Category.create! name: "Skincare"
+
+Category.create! name: "Tonner"
+
+Supplier.create!(name: "The face shop",
+                 address: "Korea",
+                 phone: "1234567890")
+
+Supplier.create!(name: "Oganic",
+                 address: "VietNam",
+                 phone: "0245413434")
+
 User.create!(username: "Nhung",
              email: "admin1@gmail.com",
              password: "111111",
