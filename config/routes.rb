@@ -11,6 +11,9 @@ Rails.application.routes.draw do
     resources :users, except: :new
   end
   namespace :admin do
+    get "/add_product", to: "products#new"
+    post "/add_product", to: "products#create"
     resources :users, except: :edit
+    resources :products
   end
 end

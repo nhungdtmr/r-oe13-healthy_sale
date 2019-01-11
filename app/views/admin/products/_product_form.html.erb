@@ -1,0 +1,28 @@
+<div class="col-md-6 col-md-offset-3">
+  <div class="new-form">
+    <%= form_for([:admin, @product], html: {multipart: true}) do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      <%= f.text_field :name, placeholder: t(".enter_name"), class: "form-control" %>
+      <%= f.text_field :manufacture, placeholder: (".enter_manufacture"), class: "form-control" %>
+      <%= f.text_field :net_weight, placeholder: (".enter_net_weight"), class: "form-control" %>
+      <%= f.text_field :price, placeholder: t(".enter_price"), class: "form-control" %>
+      <div>
+        <%= f.select :category_id do %>
+          <% @category.each do |c| -%>
+            <%= content_tag :option, c.name, value: c.id %>
+          <% end %>
+        <% end %>
+      </div> <br>
+      <div>
+        <%= f.collection_check_boxes(:supplier_ids, @suppliers, :id, :name) do |b| %>
+          <%= b.label class: "label-checkbox" do %>
+            <%= b.check_box + b.text %>
+          <% end %>
+        <% end %>
+        <br/>
+      </div>
+      <%= f.text_field :description, placeholder: t(".enter_description"), class: "form-control" %>
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
