@@ -2,24 +2,50 @@
 <div class="kenh14-border" id="blog-title" >
   <h1><%= t ".products_title" %></h1>
 </div>
-  <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-md-4">
-        <section class="user_info">
-          <div class="card-body">
-            <h4 class="card-title"><%= link_to product.name,"#" %></h4>
-            <h5><%= product.net_weight %></h5>
-            <h5><%= product.manufacture %></h5>
-            <h5><%= product.price %></h5>
-            <h5><%= product.description %></h5>
-          </div>
-          <div class="card-footer">
-            <% if current_user.admin? %>
-              <%= link_to (t ".delete"), "#", action: "destroy", method: :delete,  data: {confirm: t(".you_want")}, class: "btn btn-danger", id: "delete-button", remote: true %>
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th class="text-col"><%= t ".index" %></th>
+        <th class="text-col"><%= t ".image" %></th>
+        <th class="text-col"><%= t ".name" %></th>
+        <th class="text-col"><%= t ".manufacture" %></th>
+        <th class="text-col"><%= t ".net_weight" %></th>
+        <th class="text-col"><%= t ".price" %></th>
+        <th class="text-col"><%= t ".category" %></th>
+        <th class="text-col"><%= t ".supplier" %></th>
+        <th class="text-col"><%= t ".description" %></th>
+        <th class="text-col"><%= t ".delete" %></th>
+        <th class="text-col"><%= t ".update" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each.with_index do |product, index| %>
+        <tr>
+          <td class="text-col">
+            <% params[:page] ||= Settings.value.admin_page %>
+          </td>
+          <td>
+            <% product.images.each do |img| %>
+              <%= image_tag img.url.to_s, style: "max-width: 100px; max-height: 100px", class: "img-responsive" %>
             <% end %>
-          </div>
-        </section>
-      </div>
-    <% end %>
-  </div>
+          </td>
+          <td class="text-col"><%= product.name %></td>
+          <td class="text-col"><%= product.manufacture %></td>
+          <td class="text-col"><%= product.net_weight %></td>
+          <td class="text-col"><%= product.price %></td>
+          <td class="text-col"><%= product.category.name %></td>
+          <td class="text-col">
+            <% product.suppliers.each do|supplier| %>
+              <%= supplier.name %>
+            <% end %>
+          </td>
+          <td class="text-col"><%= product.description %></td>
+          <td class="text-col"><%= link_to t(".delete"), "#" %></td>
+          <td class="text-col"><%= link_to t(".update"), "#" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <%= paginate @products, theme: "twitter-bootstrap-3" %>

@@ -6,5 +6,5 @@ class Product < ApplicationRecord
   accepts_nested_attributes_for :images
 
   scope :order_by, -> {order created_at: :desc}
-  scope :select_products, -> {select :name, :manufacture, :net_weight, :price, :description}
+  scope :select_products, -> {select :id, :name, :manufacture, :net_weight, :price, :category_id, :description}
 end
