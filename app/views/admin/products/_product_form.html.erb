@@ -6,6 +6,12 @@
       <%= f.text_field :manufacture, placeholder: (".enter_manufacture"), class: "form-control" %>
       <%= f.text_field :net_weight, placeholder: (".enter_net_weight"), class: "form-control" %>
       <%= f.text_field :price, placeholder: t(".enter_price"), class: "form-control" %>
+      <%= f.fields_for @product.images do |i| %>
+        <div class="field">
+          <%= i.label :image %><br/>
+          <%= i.file_field :url, multiple: true, name: "images[url][]", class: "upload-image" %>
+        </div>
+      <% end %>
       <div>
         <%= f.select :category_id do %>
           <% @category.each do |c| -%>

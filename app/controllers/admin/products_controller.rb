@@ -6,12 +6,13 @@ class Admin::ProductsController < Admin::BaseController
 
   def new
     @product = Product.new
+    @images = @product.images.build
   end
 
   def create
     @product = Product.new product_params
     @product.supplier_ids = params[:product][:supplier_ids]
-    if @product.save
+    if insert_image_data
       flash[:success] = t ".add_success"
       redirect_to admin_products_path
     else
@@ -19,11 +20,22 @@ class Admin::ProductsController < Admin::BaseController
       render :new
     end
   end
+
+  def insert_image_data
+    ActiveRecord::Base.transaction do
+      @product.save
+      params[:images]["url"].each do |img|
+        @image = Image.create product_id: @product.id, url: img
+        @image.save
+      end
+    end
+  end
   
   private
 
   def product_params
-    params.require(:product).permit :name, :manufacture, :net_weight, :price, :description, :category_id, :supplier_ids
+    params.require(:product).permit :name, :manufacture, :net_weight, :price, :description, :category_id, 
+      supplier_ids: [], images_attributes: [:id, :product_id, :url]
   end
 
   def load_product
