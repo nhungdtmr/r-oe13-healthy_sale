@@ -12,6 +12,10 @@ en:
         enter_net_weight: "Enter product's net weight"
         enter_price: "Enter product's price"
         enter_description: "Enter product's description"
+      edit:
+        admin_page: "Admin page"
+        edit_product_title: "Edit product"
+        save: "Save"
       index:
         admin_page: "Admin page"
         products_title: "All products"
@@ -26,6 +30,7 @@ en:
         supplier: "Supplier"
         description: "Description"
         update: "Update"
+        confirm_delete: "Are you sure?"
       new:
         admin_page: "Admin page"
         new_product_title: "New product"
@@ -38,6 +43,7 @@ en:
       email: " info@domain.com"
       facebook: "https://www.facebook.com/marinhungdo"
       google: "https://plus.google.com/discover"
+      search: "Search"
     footer:
       name_develop: "ABC team"
       about: "About"

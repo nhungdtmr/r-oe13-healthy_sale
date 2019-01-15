@@ -19,9 +19,9 @@
           <% end %>
         <% end %>
       </div> <br>
-      <div>
+      <div class="form-check form-check-inline">
         <%= f.collection_check_boxes(:supplier_ids, @suppliers, :id, :name) do |b| %>
-          <%= b.label class: "label-checkbox" do %>
+          <%= b.label class: "form-check-label" do %>
             <%= b.check_box + b.text %>
           <% end %>
         <% end %>

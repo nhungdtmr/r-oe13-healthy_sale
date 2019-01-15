@@ -41,11 +41,18 @@
             <% end %>
           </td>
           <td class="text-col"><%= product.description %></td>
-          <td class="text-col"><%= link_to t(".delete"), "#" %></td>
-          <td class="text-col"><%= link_to t(".update"), "#" %></td>
+          <td class="text-col">
+            <%= link_to raw("<span class='glyphicon glyphicon-trash text-danger'></span>"), [:admin, product], method: :delete,
+            data: {confirm: t(".confirm_delete"), remote: true}, class: "delete" %>
+          </td>
+          <td class="text-col">
+            <%= link_to edit_admin_product_path(product) do %>
+              <i class="fa fa-refresh"></i>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
-<%= paginate @products, theme: "twitter-bootstrap-3" %>
+
