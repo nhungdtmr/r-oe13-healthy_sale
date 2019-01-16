@@ -66,8 +66,30 @@ en:
       user: " User"
       login: " Login"
       logout: " Logout"
+      search: "Search"
     application:
       base_title: "Healthy sale"
+  products:
+    index:
+      base_title: "Healthy sale"
+      cate: "PRODUCT PORTFOLIO"
+      skincare: "SKINCARE"
+      cleansers: "CLEANSERS"
+      moisturizer: "MOISTURIZERS"
+      serums: "TREATMENT & SERUMS"
+      eye: "EYE TREATMENTS"
+      suncare: "SUNCARE"
+      brands: "BRANDS"
+      price_range: "Price Range"
+      from: "$ 0"
+      to: "$ 600"
+      items: "ALL PRODUCTS"
+      price: "Price"
+      name_items1: "Plirobery"
+      add_cart: "Add to Cart"
+      show_detail: "Show detail"
+      brand_1_num: (50)
+      brand_1_value: Acne
   sessions:
     new:
       login_title: "Login"
