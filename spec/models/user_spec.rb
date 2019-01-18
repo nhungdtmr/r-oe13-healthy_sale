@@ -17,7 +17,8 @@ RSpec.describe User, type: :model do
         should validate_length_of(:username).is_at_most(Settings.value.maximum_name)}
     it {should validate_presence_of(:email)
         should validate_length_of(:email).is_at_most(Settings.value.maximum_email)}
-    it {should validate_presence_of(:password)}
+    it {should validate_presence_of(:password)
+        should validate_length_of(:password).is_at_least(Settings.value.minimum_password).is_at_most(Settings.value.maximum_password)}
     it {should validate_presence_of(:dob)}
     it {should validate_presence_of(:address)}
     it {should validate_presence_of(:phone)}

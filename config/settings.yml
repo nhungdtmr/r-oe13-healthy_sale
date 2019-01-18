@@ -5,5 +5,7 @@ value:
   end_date: 100
   user_page: 20
   product_page: 20
-
-type_image: "max-width: 90px; max-height: 90px"
+  minimum_price: 1
+  maximum_price: 10000
+  minimum_password: 6
+  maximum_password: 15
