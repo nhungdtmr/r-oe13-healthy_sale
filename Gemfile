@@ -24,6 +24,7 @@ gem "i18n", "~> 0.7.0"
 gem "config", "~> 1.4.0"
 gem "jquery-ui-rails"
 gem "font-awesome-rails"
+gem "ransack"
 
 group :development, :test do
   gem "mysql2", "~> 0.4.4"

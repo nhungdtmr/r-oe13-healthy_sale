@@ -3,7 +3,7 @@ class Admin::ProductsController < Admin::BaseController
   before_action :load_category, :load_supplier, only: %i(new create edit destroy)
 
   def index
-    @products = Product.order_by.search(params[:search]).page(params[:search]).per Settings.value.admin_page
+    @products = Product.order_by.search_by_name(params[:search]).page(params[:search]).per Settings.value.admin_page
   end
 
   def new

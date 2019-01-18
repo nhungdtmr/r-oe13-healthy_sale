@@ -1,6 +1,26 @@
-Category.create! name: "Skincare"
+Category.create! name: "FACE"
 
-Category.create! name: "Tonner"
+Category.create! name: "EYE TREATMENTS"
+
+Category.create! name: "LIP"
+
+Category.create! name: "CLEANSERS"
+
+Category.create! name: "TREATMENT & SERUMS"
+
+Category.create! name: "SUNCARE"
+
+Category.create! name: "NAILS POLISH"
+
+Category.create! name: "GEL"
+
+Category.create! name: "SHAMPOO"
+
+Category.create! name: "STREATMENT"
+
+Category.create! name: "HAIR COLOR"
+
+Category.create! name: "BATH & SHOWER"
 
 Supplier.create!(name: "The face shop",
                  address: "Korea",

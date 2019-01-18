@@ -8,7 +8,10 @@ class Product < ApplicationRecord
   scope :order_by, -> {order created_at: :desc}
   scope :select_products, -> {select :id, :name, :manufacture, :net_weight, :price, :category_id, :description}
   
-  def self.search search
+  scope :search_products_by_category, -> category_name {Product.includes(:category)
+    .where(categories: {name: category_name}) unless category_name.nil?}
+  
+  def self.search_by_name search
     if search
       where("name LIKE ?", "%#{search}%")
     else
