@@ -98,13 +98,9 @@
         <div class="col-sm-4">
           <div class="search_box pull-right">
             <%= form_tag products_path, method: :get, class:"d-flex" do %>
-              <div class="row">
-                <div class="col-sm">
-                  <%= text_field_tag :search, params[:search], class: "form-control", placeholder: t(".search") %>
-                </div>
-                <div class="col-sm">
-                  <%= submit_tag t(".search"), class: "btn btn-primary" %>
-                </div>
+              <div class="search-container">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
               </div>
             <% end %>
           </div>

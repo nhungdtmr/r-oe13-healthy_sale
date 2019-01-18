@@ -63,8 +63,8 @@ class Admin::ProductsController < Admin::BaseController
   end
 
   def load_product
-    @products = Product.find_by id: params[:id]
-    return if @products
+    @product = Product.find_by id: params[:id]
+    return if @product
     flash[:danger] = t ".no_product"
     redirect_to admin_products_path
   end

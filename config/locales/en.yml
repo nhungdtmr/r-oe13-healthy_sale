@@ -67,6 +67,31 @@ en:
       login: " Login"
       logout: " Logout"
       search: "Search"
+    side_bar:
+      cate: "PRODUCT PORTFOLIO"
+      skincare: "SKINCARE"
+      nails: "NAILS"
+      body: "BATH & BODY"
+      hair: "HAIR"
+      cleansers: "CLEANSERS"
+      moisturizer: "MOISTURIZERS"
+      serums: "TREATMENT & SERUMS"
+      eye: "EYE TREATMENTS"
+      suncare: "SUNCARE"
+      face: "Face"
+      lip: "Lip"
+      nails_polish: "NAILS POLISH"
+      gel: "GEL"
+      shampoo: "SHAMPOO"
+      streatment: "STREATMENT"
+      hair_color: "HAIR COLOR"
+      brands: "BRANDS"
+      bath_shower: "BATH & SHOWER"
+      price_range: "Price Range"
+      from: "$ 0"
+      to: "$ 600"
+      brand_1_num: (50)
+      brand_1_value: Acne
     application:
       base_title: "Healthy sale"
   products:
@@ -90,6 +115,10 @@ en:
       show_detail: "Show detail"
       brand_1_num: (50)
       brand_1_value: Acne
+      type_price: "$ "
+    show:
+      type_price: "$ "
+      add_cart: "Add to Cart"
   sessions:
     new:
       login_title: "Login"
