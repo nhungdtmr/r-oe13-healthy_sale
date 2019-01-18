@@ -99,9 +99,7 @@
               <div class="row">
                 <div class="col-sm-6">
                   <%= text_field_tag :search, params[:search], class: "form-control", placeholder: t(".search") %>
-                </div>
-                <div class="col-sm-2">
-                  <%= submit_tag t(".search"), class: "btn btn-primary" %>
+                  <button type="submit"><i class="fa fa-search"></i></button>
                 </div>
               </div>
             <% end %>

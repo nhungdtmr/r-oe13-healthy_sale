@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :oders
+  has_many :orders
   has_many :imports
   scope :order_by, -> {order created_at: :desc}
   scope :select_users, -> {select :username, :email, :dob, :address, :phone, :id}
@@ -11,6 +11,10 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX},
     uniqueness: {case_sensitive: false}
   validates :password, presence: true, allow_nil: true
+  validates :dob, presence: true
+  validates :address, presence: true
+  validates :phone, presence: true
+  validates :role, presence: true
   has_secure_password
   enum role: %i(member admin)
 

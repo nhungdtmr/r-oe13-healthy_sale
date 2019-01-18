@@ -14,9 +14,9 @@
                   <%= t ".makeup" %>
                 <% end %>
                 <ul class="dropdown-menu">
-                  <li><%= link_to t(".face"), "#" %></li>
-                  <li><%= link_to t(".eye"), "#" %></li>
-                  <li><%= link_to t(".lip"), "#" %></li>
+                  <li><%= link_to t(".face"), products_path(category: t(".face")) %></li>
+                  <li><%= link_to t(".eye"), products_path(category: t(".eye")) %></li>
+                  <li><%= link_to t(".lip"), products_path(category: t(".lip")) %></li>
                 </ul>
               </li>
             </ul>
@@ -29,11 +29,9 @@
                   <%= t ".skincare" %>
                 <% end %>
                 <ul class="dropdown-menu">
-                  <li><%= link_to t(".cleansers"), "#" %></li>
-                  <li><%= link_to t(".moisturizer"), "#" %></li>
-                  <li><%= link_to t(".serums"), "#" %></li>
-                  <li><%= link_to t(".eye"), "#" %></li>
-                  <li><%= link_to t(".suncare"), "#" %></li>
+                  <li><%= link_to t(".cleansers"), products_path(category: t(".cleansers")) %></li>
+                  <li><%= link_to t(".serums"), products_path(category: t(".serums")) %></li>
+                  <li><%= link_to t(".suncare"), products_path(category: t(".suncare")) %></li>
                 </ul>
               </li>
             </ul>
@@ -46,8 +44,8 @@
                   <%= t ".nails" %>
                 <% end %>
                 <ul class="dropdown-menu">
-                  <li><%= link_to t(".nails_polish"), "#" %></li>
-                  <li><%= link_to t(".gel"), "#" %></li>
+                  <li><%= link_to t(".nails_polish"), products_path(category: t(".nails_polish")) %></li>
+                  <li><%= link_to t(".gel"), products_path(category: t(".gel")) %></li>
                 </ul>
               </li>
             </ul>
@@ -60,9 +58,9 @@
                   <%= t ".hair" %>
                 <% end %>
                 <ul class="dropdown-menu">
-                  <li><%= link_to t(".shampoo"), "#" %></li>
-                  <li><%= link_to t(".streatment"), "#" %></li>
-                  <li><%= link_to t(".hair_color"), "#" %></li>
+                  <li><%= link_to t(".shampoo"), products_path(category: t(".shampoo")) %></li>
+                  <li><%= link_to t(".streatment"), products_path(category: t(".streatment")) %></li>
+                  <li><%= link_to t(".hair_color"), products_path(category: t(".hair_color")) %></li>
                 </ul>
               </li>
             </ul>
@@ -75,7 +73,7 @@
                   <%= t ".body" %>
                 <% end %>
                 <ul class="dropdown-menu">
-                  <li><%= link_to t(".bath_shower"), "#" %></li>
+                  <li><%= link_to t(".bath_shower"), products_path(category: t(".bath_shower")) %></li>
                 </ul>
               </li>
             </ul>

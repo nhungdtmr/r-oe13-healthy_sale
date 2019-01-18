@@ -24,10 +24,14 @@ gem "i18n", "~> 0.7.0"
 gem "config", "~> 1.4.0"
 gem "jquery-ui-rails"
 gem "font-awesome-rails"
+gem "ransack"
 
 group :development, :test do
   gem "mysql2", "~> 0.4.4"
   gem "byebug",  "~> 9.0.6", platform: :mri
+  gem "rspec-rails"
+  gem "capybara"
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -43,6 +47,8 @@ group :test do
   gem "minitest-reporters", "~> 1.1.14"
   gem "guard", "~> 2.14.1"
   gem "guard-minitest", "~> 2.4.6"
+  gem "shoulda-matchers", "~> 4.0.0.rc1"
+  gem "database_cleaner"
 end
 
 group :production do

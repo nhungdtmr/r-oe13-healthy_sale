@@ -99,7 +99,7 @@
           <div class="search_box pull-right">
             <%= form_tag products_path, method: :get, class:"d-flex" do %>
               <div class="search-container">
-                <input type="text" placeholder="Search.." name="search">
+                <%= text_field_tag :product_name, params[:product_name], class: "form-control", placeholder: "Search..", data: {autocomplete_source: products_path} %>
                 <button type="submit"><i class="fa fa-search"></i></button>
               </div>
             <% end %>
