@@ -5,6 +5,12 @@ en:
         admin_page: "Admin page"
         users_title: "All Users"
         delete: "Delete"
+        index: "Index"
+        image: "Image"
+        name: "Name"
+        dob: "Birthday"
+        phone: "Phone"
+        address: "Address"
     products:
       product_form:
         enter_name: "Enter product's name"

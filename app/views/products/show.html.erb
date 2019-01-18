@@ -7,23 +7,23 @@
         <div class="product-details">
           <div class="col-md-5">
             <div class="view-product">
-              <%= image_tag @product.images.first.url.to_s, alt: "produt_i:e" %>
+              <%= image_tag @product.images.first.url.to_s, alt: "product" %>
             </div>
             <div id="similar-product" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="item active">
                   <% @product.images.each do |img| %>
-                    <%= image_tag img.url.to_s, style: "max-width: 100px; max-height: 100px", class: "img-responsive" %>
+                    <%= image_tag img.url.to_s, class: "img-responsive" %>
                   <% end %>
                 </div>
                 <div class="item">
                   <% @product.images.each do |img| %>
-                    <%= image_tag img.url.to_s, style: "max-width: 100px; max-height: 100px", class: "img-responsive" %>
+                    <%= image_tag img.url.to_s, class: "img-responsive" %>
                   <% end %>
                 </div>
                 <div class="item">
                   <% @product.images.each do |img| %>
-                    <%= image_tag img.url.to_s, style: "max-width: 100px; max-height: 100px", class: "img-responsive" %>
+                    <%= image_tag img.url.to_s, class: "img-responsive" %>
                   <% end %>
                 </div>
               </div>
