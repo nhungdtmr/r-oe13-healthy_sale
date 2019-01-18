@@ -5,3 +5,5 @@ value:
   end_date: 100
   user_page: 20
   product_page: 20
+
+type_image: "max-width: 90px; max-height: 90px"
