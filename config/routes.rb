@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
-    root "static_pages#home"
+    root "products#index"
     get "/help", to: "static_pages#help", as: :help
     get "/contact", to: "static_pages#contact", as: :contact
     get "/signup", to: "users#new"
@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     resources :users, except: :new
+    resources :products
   end
   namespace :admin do
     get "/add_product", to: "products#new"

@@ -7,7 +7,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background: $white;
   position: relative;
-  font-weight:400px;
+  font-weight:300px;
   padding-top: 0px;
 }
 
@@ -165,4 +165,8 @@ p {
   margin-top: 75px;
   text-align: center;
   width: 50px;
+}
+
+.table-responsive{
+  text-align: center;
 }
