@@ -1,0 +1,138 @@
+<div class="col-sm-3">
+  <div class="left-sidebar">
+    <h2><%= t ".cate" %></h2>
+    <div class="panel-group category-products" id="accordian">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <ul>
+              <li class="dropdown">
+                <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+                  <span class="badge pull-right">
+                    <i class="fa fa-plus"></i>
+                  </span>
+                  <%= t ".makeup" %>
+                <% end %>
+                <ul class="dropdown-menu">
+                  <li><%= link_to t(".face"), "#" %></li>
+                  <li><%= link_to t(".eye"), "#" %></li>
+                  <li><%= link_to t(".lip"), "#" %></li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li class="dropdown">
+                <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+                  <span class="badge pull-right">
+                    <i class="fa fa-plus"></i>
+                  </span>
+                  <%= t ".skincare" %>
+                <% end %>
+                <ul class="dropdown-menu">
+                  <li><%= link_to t(".cleansers"), "#" %></li>
+                  <li><%= link_to t(".moisturizer"), "#" %></li>
+                  <li><%= link_to t(".serums"), "#" %></li>
+                  <li><%= link_to t(".eye"), "#" %></li>
+                  <li><%= link_to t(".suncare"), "#" %></li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li class="dropdown">
+                <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+                  <span class="badge pull-right">
+                    <i class="fa fa-plus"></i>
+                  </span>
+                  <%= t ".nails" %>
+                <% end %>
+                <ul class="dropdown-menu">
+                  <li><%= link_to t(".nails_polish"), "#" %></li>
+                  <li><%= link_to t(".gel"), "#" %></li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li class="dropdown">
+                <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+                  <span class="badge pull-right">
+                    <i class="fa fa-plus"></i>
+                  </span>
+                  <%= t ".hair" %>
+                <% end %>
+                <ul class="dropdown-menu">
+                  <li><%= link_to t(".shampoo"), "#" %></li>
+                  <li><%= link_to t(".streatment"), "#" %></li>
+                  <li><%= link_to t(".hair_color"), "#" %></li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li class="dropdown">
+                <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+                  <span class="badge pull-right">
+                    <i class="fa fa-plus"></i>
+                  </span>
+                  <%= t ".body" %>
+                <% end %>
+                <ul class="dropdown-menu">
+                  <li><%= link_to t(".bath_shower"), "#" %></li>
+                </ul>
+              </li>
+            </ul>
+          </h4>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title"><a href="#"><% t ".cate_miroless" %></a></h4>
+        </div>
+      </div>
+      <div class="brands_products">
+        <h2><%= t ".brands" %></h2>
+        <div class="brands-name">
+          <ul class="nav nav-pills nav-stacked">
+            <li>
+              <%= link_to "#" do %>
+                <span class="pull-right"><%= t ".brand_1_num" %></span>
+                <%= t ".brand_1_value" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <span class="pull-right"><%= t ".brand_1_num" %></span>
+                <%= t ".brand_1_value" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <span class="pull-right"><%= t ".brand_1_num" %></span>
+                <%= t ".brand_1_value" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <span class="pull-right"><%= t ".brand_1_num" %></span>
+                <%= t ".brand_1_value" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "#" do %>
+                <span class="pull-right"><%= t ".brand_1_num" %></span>
+                <%= t ".brand_1_value" %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>  
+      <div class="price-range">
+        <h2><%= t ".price_range" %></h2>
+        <div class="well text-center">
+          <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
+          <b class="pull-left"><%= t ".from" %></b> <b class="pull-right"><%= t ".to" %></b>
+        </div>
+      </div>    
+      <div class="shipping text-center">
+      </div>
+    </div>
+  </div>  
+</div>

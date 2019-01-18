@@ -731,7 +731,7 @@ h2.title {
 .product-information span {
   display: inline-block;
   margin-bottom: 8px;
-  margin-top: 18px;
+  margin-top: 0px;
 }
 
 .product-information span span {
@@ -743,16 +743,16 @@ h2.title {
   margin-right: 20px;
   margin-top: 0px;
 }
-.product-information span input {
+.product-information input {
   border: 1px solid $snow-drift;
   color: $dark-gambogeish-gray;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   height: 33px;
   outline: medium none;
   text-align: center;
-  width: 50px;
+  width: 60px;
 }
 
 .product-information span label {
