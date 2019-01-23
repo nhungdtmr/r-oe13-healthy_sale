@@ -23,7 +23,7 @@
       <% @products.each.with_index do |product, index| %>
         <tr>
           <td class="text-col">
-            <% params[:page] ||= Settings.value.admin_page %>
+            <%= create_index params[:page], index, Settings.value.admin_page %>
           </td>
           <td>
             <% product.images.each do |img| %>

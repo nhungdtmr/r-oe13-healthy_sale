@@ -1,6 +1,8 @@
-Category.create! name: "Skincare"
+array = ["FACE", "EYE TREATMENTS", "LIP", "CLEANSERS", "TREATMENT & SERUMS", "SUNCARE" "NAILS POLISH", "GEL", "SHAMPOO", "STREATMENT", "HAIR COLOR", "BATH & SHOWER"]
 
-Category.create! name: "Tonner"
+array.each do |cate|
+  Category.create! name: "#{cate}"
+end
 
 Supplier.create!(name: "The face shop",
                  address: "Korea",
@@ -18,15 +20,18 @@ User.create!(username: "Nhung",
              address: "hanoi",
              phone: "0123456789",
              role: 1)
-99.times do |n|
+20.times do |n|
   name  = FFaker::Name.name
   email = "nhung-#{n+1}@gmail.com"
   password = "password"
+  dob = FFaker::Time.date
+  address = FFaker::Address.city
+  phone = FFaker::PhoneNumber.phone_number
   User.create!(username:  name,
                email: email,
                password: password,
                password_confirmation: password,
-               dob: "2000-01-08",
+               dob: dob,
                address: address,
                phone: phone)
 end

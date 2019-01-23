@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2019_01_11_060741) do
   end
 
   create_table "imports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "employee_id"
+    t.integer "user_id"
     t.integer "supplier_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
