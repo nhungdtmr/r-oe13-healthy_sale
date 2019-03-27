@@ -2,11 +2,12 @@ class CreateProducts < ActiveRecord::Migration[5.2]
   def change
     create_table :products do |t|
       t.string :name
-      t.string :manufacture
-      t.string :net_weight
+      t.string :describe
+      t.integer :quanity
+      t.string :picture
       t.float :price
-      t.string :description
-      t.integer :category_id
+      t.float :price_new
+      t.references :category, foreign_key: true
 
       t.timestamps
     end

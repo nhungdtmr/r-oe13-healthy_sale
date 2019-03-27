@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   
   def index
     @products = Product.search_by_name(params[:product_name]).page(params[:page]).per Settings.value.product_page
+    @order_detail = current_order.order_details.new
     if params[:category]
       @products = Product.search_products_by_category(params[:category]).page(params[:page]).per Settings.value.product_page
     end

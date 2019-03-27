@@ -79,6 +79,12 @@ GEM
     crass (1.0.4)
     database_cleaner (1.7.0)
     deep_merge (1.1.1)
+    devise (4.6.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0, < 6.0)
+      responders
+      warden (~> 1.2.3)
     diff-lcs (1.3)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
@@ -329,6 +335,7 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    orm_adapter (0.5.0)
     ovirt-engine-sdk (4.3.0)
       json (>= 1, < 3)
     pg (0.17.1)
@@ -362,6 +369,9 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails-i18n (5.1.3)
+      i18n (>= 0.7, < 2)
+      railties (>= 5.0, < 6)
     railties (5.2.2)
       actionpack (= 5.2.2)
       activesupport (= 5.2.2)
@@ -386,6 +396,9 @@ GEM
       nokogiri (~> 1.5)
       trollop (~> 2.1)
     regexp_parser (1.3.0)
+    responders (2.4.1)
+      actionpack (>= 4.2.0, < 6.0)
+      railties (>= 4.2.0, < 6.0)
     rest-client (2.0.2)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -449,6 +462,8 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
+    warden (1.2.8)
+      rack (>= 2.0.6)
     web-console (3.5.1)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -474,13 +489,13 @@ DEPENDENCIES
   carrierwave
   config (~> 1.4.0)
   database_cleaner
+  devise
   factory_bot_rails
   ffaker (~> 2.7.0)
   fog (~> 1.42)
   font-awesome-rails
   guard (~> 2.14.1)
   guard-minitest (~> 2.4.6)
-  i18n (~> 0.7.0)
   jbuilder (~> 2.7.0)
   jquery-rails (~> 4.3.1)
   jquery-ui-rails
@@ -494,6 +509,7 @@ DEPENDENCIES
   puma (~> 3.9.1)
   rails (~> 5.2.2)
   rails-controller-testing (~> 1.0.2)
+  rails-i18n
   ransack
   rspec-rails
   sass-rails (~> 5.0.6)

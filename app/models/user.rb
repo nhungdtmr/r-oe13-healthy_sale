@@ -1,21 +1,20 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   has_many :orders
   has_many :imports
   scope :order_by, -> {order created_at: :desc}
-  scope :select_users, -> {select :username, :email, :dob, :address, :phone, :id}
+  scope :select_users, -> {select :name, :email, :dob, :address, :phone, :id}
   before_save :downcase_email
   attr_accessor :remember_token
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :username, presence: true, length: {maximum: Settings.value.maximum_name}
   validates :email, presence: true, length: {maximum: Settings.value.maximum_email},
     format: {with: VALID_EMAIL_REGEX},
     uniqueness: {case_sensitive: false}
   validates :password, presence: true, allow_nil: true, length: {in: Settings.value.minimum_password..Settings.value.maximum_password}
-  validates :dob, presence: true
-  validates :address, presence: true
-  validates :phone, presence: true
   validates :role, presence: true
-  has_secure_password
   enum role: %i(member admin)
 
   class << self

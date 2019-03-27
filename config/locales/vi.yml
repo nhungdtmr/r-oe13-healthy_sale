@@ -1,0 +1,126 @@
+vi: 
+  errors:
+    messages:
+      not_saved: "Lỗi"
+  devise:
+    failure:
+      user: 
+        not_found_in_database: "Không tìm được tài khoản"
+    passwords:
+      new:
+        forgot_pass: "Quên mật khẩu"
+        send_me: "Gửi cho tôi hướng dẫn đặt lại mật khẩu"
+    sessions:
+      user:
+        signed_in: "Đã đăng nhập"
+        signed_out: "Đã đăng xuất"
+      new:
+        login: "Đăng nhập"
+    shared:
+      links:
+        login: "Đăng nhập"
+        signup: "Đăng ký"
+        forgot_pass: "Quên mật khẩu?"
+        not_receive: "Không nhận được hướng dẫn xác nhận?"
+        not_unlock: "Không nhận được hướng dẫn mở khóa?"
+    registrations:
+      edit:
+        edit: "Sửa thông tin"
+        leave: "(để trống nếu bạn không muốn thay đổi nó)"
+        min: "Ít nhất"
+        character: "Ký tự"
+        current_password: "(chúng tôi cần mật khẩu hiện tại của bạn để xác nhận thay đổi của bạn)"
+        update: "Cập nhật"
+        cancel: "Hủy tài khoản"
+        sure: "Bạn chắc chắn muốn xóa"
+      new:
+        signup: "Đăng ký"
+        email: "Ex: abc@example.com"
+      user:
+        signed_up: "Đã đăng nhập"
+  admin:
+    users:
+      index:
+        admin_page: "Trang quản trị"
+        users_title: "Tất cả người dùng"
+        delete: "Xóa"
+        index: "Chỉ mục"
+        image: "Hình ảnh"
+        name: tên"
+        dob: "Sinh nhật"
+        phone: "Điện thoại"
+        address: "Địa chỉ"
+    products:
+      product_form:
+        enter_name: "Nhập tên sản phẩm"
+        enter_price: "Nhập giá của sản phẩm"
+        enter_description: "Nhập mô tả của sản phẩm"
+      edit:
+        admin_page: "Trang quản trị"
+        edit_product_title: "Chỉnh sửa sản phẩm"
+        save: "Lưu"
+      index:
+        admin_page: "Trang quản trị"
+        products_title: "Tất cả sản phẩm"
+        delete: "Xóa"
+        index: "Chỉ mục"
+        image: "Hình ảnh"
+        name: "tên"
+        price: "Giá"
+        category: "Danh mục"
+        description: "Mô tả"
+        update: "Cập nhật"
+        confirm_delete: "Bạn có chắc không?"
+      new:
+        admin_page: "Trang quản trị"
+        new_product_title: "Sản phẩm mới"
+        save: "Lưu"
+  layouts:
+    admin_layout:
+      title: "Trang quản trị"
+    admin_header:
+      phone: "+2 95 01 88 821"
+      email: "info@domain.com"
+      facebook: "https://www.facebook.com/marinhungdo"
+      google: "https://plus.google.com/discover"
+      search: "tìm kiếm"
+    footer:
+      name_develop: "Nhóm ABC"
+      about: "Giới thiệu"
+      new: "Tin tức"
+      địa chỉ: "Thành phố New York"
+      deve_by: "Được phát triển bởi"
+    header:
+      home: "Trang chủ"
+      about: "Giới thiệu"
+      help: "Trợ giúp"
+      contact: "Liên hệ"
+      user: "Người dùng"
+      phone: "+2 95 01 88 821"
+      email: "info@domain.com"
+      facebook: "https://www.facebook.com/marinhungdo"
+      google: "https://plus.google.com/discover"
+      cart: "Giỏ hàng"
+      login: "đăng nhập"
+      logout: "Đăng xuất"
+      search: "tìm kiếm"
+    side_bar:
+      cate: "PORTFOLIO SẢN PHẨM"
+      price_range: "Phạm vi giá"
+      from: "$ 0"
+      to: "$ 600"
+    application:
+      base_title: "Sneaker store"
+  products:
+    index:
+      base_title: "Sneaker store"
+      cate: "PORTFOLIO SẢN PHẨM"
+      from: "$ 0"
+      to: "$ 600"
+      items: "TẤT CẢ SẢN PHẨM"
+      price: "Giá"
+      name_items1: "Plirobery"
+      add_cart: "Thêm vào giỏ hàng"
+      show_detail: "Hiển thị chi tiết"
+    show:
+      add_cart: "Thêm vào giỏ hàng"

@@ -6,5 +6,7 @@ class Order < ApplicationRecord
   validates :order_phone, presence: true
   validates :status, presence: true
   validates :description, presence: true
-  enum status: %i(waitting stopped suspended)
+  enum status: {pending: 0, accept: 1, suspended: 2}
+
+  scope :order_by, -> {order created_at: :desc}
 end

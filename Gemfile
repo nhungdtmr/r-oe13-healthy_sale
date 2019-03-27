@@ -20,11 +20,12 @@ gem "uglifier", "~> 3.2.0"
 gem "jquery-rails", "~> 4.3.1"
 gem "turbolinks", "~> 5.0.1"
 gem "jbuilder", "~> 2.7.0"
-gem "i18n", "~> 0.7.0"
+gem "rails-i18n"
 gem "config", "~> 1.4.0"
 gem "jquery-ui-rails"
 gem "font-awesome-rails"
 gem "ransack"
+gem "devise"
 
 group :development, :test do
   gem "mysql2", "~> 0.4.4"

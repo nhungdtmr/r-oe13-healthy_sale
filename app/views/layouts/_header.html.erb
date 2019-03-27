@@ -49,29 +49,27 @@
           <div class="shop-menu pull-right">
             <ul class="nav navbar-nav">
               <li>
+                <% render "carts/cart_text" %>
                 <%= link_to "#" do %>
                   <i class="fa fa-shopping-cart"></i><%= t ".cart" %>
                 <% end %>
               </li>
               <li>
-                <% if logged_in? %>
-                  <% if current_user.admin? %>
-                    <li><%= link_to t(".admin_page"), admin_users_path %></li>
-                  <%end%>
+                <% if user_signed_in? %>
                   <li class="dropdown">
                     <%= link_to "#", class: "dropdown-toggle", data: {toggle: "dropdown"}  do %>
-                      <i class="fa fa-user"></i><%= current_user.username %>
+                      <i class="fa fa-user"></i><%= current_user.email %>
                       <b class="caret"></b>
                     <% end %>
                     <ul class="dropdown-menu">
-                      <li><%= link_to t(".profile"), current_user %></li>
-                      <li><%= link_to t(".settings"), edit_user_path(current_user) %></li>
+                      <li><%= link_to t(".profile"), "#" %></li>
+                      <li><%= link_to t(".settings"), edit_user_registration_path %></li>
                       <li class="divider"></li>
-                      <li><%= link_to t(".log_out"), logout_path, method: :delete %></li>
+                      <li><%= link_to t(".log_out"), destroy_user_session_path, method: :delete %></li>
                     </ul>
                   </li>
                 <% else %>
-                  <%= link_to login_path do %>
+                  <%= link_to new_user_session_path do %>
                     <i class="fa fa-lock"></i><%= t ".login" %>
                   <% end %>
                 <% end %>

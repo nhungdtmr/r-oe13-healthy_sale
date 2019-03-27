@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   has_many :images
   belongs_to :category
+  has_many :order_details
   has_many :supplier_products
   has_many :suppliers, through: :supplier_products
   validates :name, presence: true
